@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Batalla Pokémon OOP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-8">
+      <h1 class="text-4xl font-bold text-center mb-8">Batalla Pokémon</h1>
+
+      <div class="flex justify-between space-x-8">
+        <!-- Contenedor del Pokémon 1 -->
+        <div class="pokemon w-1/2 bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold mb-4">
+            <select id="pokemon1-select" class="w-full p-2 border rounded">
+              <option value="">Cargando Pokémon...</option>
+            </select>
+          </h2>
+          <h4 class="text-lg font-medium mb-2">Estado especial</h4>
+          <select id="pokemon1-status" class="w-full p-2 border rounded">
+            <option value="none">Sin estado</option>
+            <option value="burned">Quemado</option>
+            <option value="poisoned">Envenenado</option>
+            <option value="paralyzed">Paralizado</option>
+            <option value="frozen">Congelado</option>
+            <option value="sleep">Dormido</option>
+          </select>
+          <h2 class="text-2xl font-semibold mt-4">
+            <div id="poke1-name"></div>
+          </h2>
+          <!-- Imagen del Pokémon 1 con mejoras -->
+          <img
+            id="poke1-img"
+            alt="Pokemon 1"
+            class="mx-auto my-4 w-48 h-48 object-cover border-4 border-blue-500 rounded-full shadow-xl transition-transform duration-300 hover:scale-110"
+          />
+          <div id="poke1-stats" class="text-lg"></div>
+        </div>
+
+        <!-- Contenedor del Pokémon 2 -->
+        <div class="pokemon w-1/2 bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-2xl font-semibold mb-4">
+            <select id="pokemon2-select" class="w-full p-2 border rounded">
+              <option value="">Cargando Pokémon...</option>
+            </select>
+          </h2>
+          <h4 class="text-lg font-medium mb-2">Estado especial</h4>
+          <select id="pokemon2-status" class="w-full p-2 border rounded">
+            <option value="none">Sin estado</option>
+            <option value="burned">Quemado</option>
+            <option value="poisoned">Envenenado</option>
+            <option value="paralyzed">Paralizado</option>
+            <option value="frozen">Congelado</option>
+            <option value="sleep">Dormido</option>
+          </select>
+          <h2 class="text-2xl font-semibold mt-4">
+            <div id="poke2-name"></div>
+          </h2>
+          <!-- Imagen del Pokémon 2 con mejoras -->
+          <img
+            id="poke2-img"
+            alt="Pokemon 2"
+            class="mx-auto my-4 w-48 h-48 object-cover border-4 border-red-500 rounded-full shadow-xl transition-transform duration-300 hover:scale-110"
+          />
+          <div id="poke2-stats" class="text-lg"></div>
+        </div>
+      </div>
+
+      <button
+        id="start-battle-button"
+        class="mt-8 w-full p-4 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700"
+      >
+        ¡Comenzar Batalla!
+      </button>
+
+      <div
+        id="battle-log"
+        class="mt-8 p-4 bg-white rounded-lg shadow-lg text-lg"
+      ></div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
